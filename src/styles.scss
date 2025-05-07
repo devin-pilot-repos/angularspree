@@ -2,7 +2,7 @@
 @import 'node_modules/bootstrap/scss/bootstrap-grid';
 @import 'app/shared/scss/themes';
 @import 'app/shared/scss/selected_theme_variables';
-@import 'node_modules/ngx-toastr/toastr-bs4-alert';
+// Removed ngx-toastr import temporarily
 $break-small: 320px;
 ol,
 ul {

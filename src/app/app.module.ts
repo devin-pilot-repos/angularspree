@@ -27,7 +27,7 @@ import { reducers, metaReducers } from './app.reducers';
 import { CheckoutHeaderComponent } from './layout/checkout-header/checkout-header.component';
 import { CheckoutFooterComponent } from './layout/checkout-footer/checkout-footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
+import { ToastrService } from './core/services/mock-toastr.service';
 import { AddressService } from './checkout/address/services/address.service';
 
 @NgModule({
@@ -71,12 +71,8 @@ import { AddressService } from './checkout/address/services/address.service';
     FormsModule,
     LayoutModule,
     Ng2UiAuthModule.forRoot(myAuthConfig),
-    ToastrModule.forRoot({
-      timeOut: 1500,
-      positionClass: 'toast-top-center',
-      preventDuplicates: true,
-      progressAnimation: 'increasing'
-    }),
+    // ToastrModule removed temporarily
+    
     CoreModule,
     SharedModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
