@@ -16,9 +16,9 @@
   <button NguCarouselNext class="rightRs d-none d-sm-block"></button>
   <ul class="ngucarouselPoint" NguCarouselPoint>
     <li
-      *ngFor="let i of landingBanners.pointNumbers; let i = index"
-      [class.active]="i == landingBanners.activePoint"
-      (click)="landingBanners.moveTo(i)"
+      *ngFor="let point of landingBanners.pointNumbers; let i = index"
+      [class.active]="point == landingBanners.activePoint"
+      (click)="landingBanners.moveTo(point)"
     ></li>
   </ul>
 </ngu-carousel>

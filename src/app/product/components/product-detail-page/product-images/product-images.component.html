@@ -47,9 +47,9 @@
       <button NguCarouselNext class="rightRs d-none"></button>
       <ul class="ngucarouselPoint" NguCarouselPoint>
         <li
-          *ngFor="let i of productSlider.pointNumbers; let i = index"
-          [class.active]="i == productSlider.activePoint"
-          (click)="productSlider.moveTo(i)"
+          *ngFor="let point of productSlider.pointNumbers; let i = index"
+          [class.active]="point == productSlider.activePoint"
+          (click)="productSlider.moveTo(point)"
         ></li>
       </ul>
     </ngu-carousel>
