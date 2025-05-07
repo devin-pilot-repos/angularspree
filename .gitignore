@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+/out-tsc
 
 # dependencies
 /node_modules
@@ -33,6 +34,7 @@ testem.log
 /typings
 
 .cache
+/.angular/
 
 # e2e
 /e2e/*.js

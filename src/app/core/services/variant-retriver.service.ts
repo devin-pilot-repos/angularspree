@@ -1,5 +1,3 @@
-import { element } from 'protractor';
-
 /**
  * Note: This Service has a Lot of
  * Corner Cases that are not covered.
