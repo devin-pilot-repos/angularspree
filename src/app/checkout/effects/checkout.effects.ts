@@ -3,7 +3,7 @@ import { Action } from '@ngrx/store';
 import { map, switchMap } from 'rxjs/operators';
 import { CheckoutService } from './../../core/services/checkout.service';
 import { CheckoutActions } from './../actions/checkout.actions';
-import { Effect, Actions, ofType } from '@ngrx/effects';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Injectable } from '@angular/core';
 import { Order } from '../../core/models/order';
 import { AddressService } from '../address/services/address.service';
@@ -15,8 +15,7 @@ import { Observable } from 'rxjs';
 export class CheckoutEffects {
   isBuyNowAction: boolean;
 
-  @Effect()
-  AddToCart$ = this.actions$.pipe(
+  AddToCart$ = createEffect(() => this.actions$.pipe(
     ofType(CheckoutActions.ADD_TO_CART),
     switchMap<
       Action & {
@@ -36,17 +35,15 @@ export class CheckoutEffects {
       }
       return this.actions.fetchCurrentOrderSuccess(order);
     })
-  );
+  ));
 
-  @Effect()
-  OrderDetails$ = this.actions$.pipe(
+  OrderDetails$ = createEffect(() => this.actions$.pipe(
     ofType(CheckoutActions.GET_ORDER_DETAILS),
     switchMap<Action, Observable<Order>>(_ => this.checkoutService.getOrder()),
     map(order => this.actions.fetchCurrentOrderSuccess(order))
-  );
+  ));
 
-  @Effect()
-  BindAddress$ = this.actions$.pipe(
+  BindAddress$ = createEffect(() => this.actions$.pipe(
     ofType(CheckoutActions.BIND_ADDRESS),
     switchMap<
       Action & { payload: { address: Address; orderId: number } },
@@ -58,10 +55,9 @@ export class CheckoutEffects {
       );
     }),
     map(order => this.actions.fetchCurrentOrderSuccess(order))
-  );
+  ));
 
-  @Effect()
-  BindPayment$ = this.actions$.pipe(
+  BindPayment$ = createEffect(() => this.actions$.pipe(
     ofType(CheckoutActions.BIND_PAYMENT),
     switchMap<
       Action & {
@@ -80,10 +76,9 @@ export class CheckoutEffects {
       );
     }),
     map(order => this.actions.getOrderPaymentsSuccess(order))
-  );
+  ));
 
-  @Effect()
-  ShippingPreferencess$ = this.actions$.pipe(
+  ShippingPreferencess$ = createEffect(() => this.actions$.pipe(
     ofType(CheckoutActions.SHIPPING_PREFERENCES),
     switchMap<
       Action & { payload: { orderId: number; packages: Array<{}> } },
@@ -98,7 +93,7 @@ export class CheckoutEffects {
       this.router.navigate(['/checkout', 'payment']);
       return this.actions.fetchCurrentOrderSuccess(order);
     })
-  );
+  ));
 
   constructor(
     private actions$: Actions,

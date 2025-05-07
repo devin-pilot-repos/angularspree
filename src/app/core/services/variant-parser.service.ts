@@ -1,4 +1,3 @@
-import { Effect } from '@ngrx/effects';
 import { OptionValue } from './../models/option_value';
 import { Variant } from './../models/variant';
 import { OptionType } from './../models/option_type';

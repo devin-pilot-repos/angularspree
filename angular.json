@@ -48,7 +48,14 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "serviceWorker": true
+            "serviceWorker": true,
+            "allowedCommonJsDependencies": [
+              "ng5-slider",
+              "jsonapi-deserializer",
+              "angular-svg-round-progressbar",
+              "detect-passive-events",
+              "scriptjs"
+            ]
           },
           "configurations": {
             "mock-ng-spree": {
