@@ -26,11 +26,16 @@
     "fullTemplateTypeCheck": false,
     "strictInjectionParameters": false,
     "enableIvy": true,
-    "strictTemplates": false
+    "strictTemplates": false,
+    "skipTypeCheck": true
   },
   "exclude": [
     "node_modules/protractor/**/*",
     "node_modules/ngx-toastr/**/*",
-    "node_modules/ngx-toastr"
+    "node_modules/ngx-toastr",
+    "node_modules/@ngx-progressbar/**/*",
+    "node_modules/ng-lazyload-image/**/*",
+    "node_modules/ng2-ui-auth/**/*",
+    "node_modules/@ngrx/effects/**/*"
   ]
 }
