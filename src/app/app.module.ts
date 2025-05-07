@@ -2,10 +2,8 @@ import { AppPreloadingStrategy } from './app_preloading_strategy';
 import { myAuthConfig } from './oauth_config';
 import { Ng2UiAuthModule } from 'ng2-ui-auth';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  BrowserModule,
-  TransferState
-} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { TransferState } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
