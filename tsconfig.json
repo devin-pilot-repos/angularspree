@@ -19,7 +19,7 @@
       "es2018",
       "dom"
     ],
-    "types": []
+    "types": ["node"]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
