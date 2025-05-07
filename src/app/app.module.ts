@@ -4,7 +4,7 @@ import { Ng2UiAuthModule } from 'ng2-ui-auth';
 import { EffectsModule } from '@ngrx/effects';
 import {
   BrowserModule,
-  BrowserTransferStateModule
+  TransferState
 } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -66,7 +66,6 @@ import { AddressService } from './checkout/address/services/address.service';
 
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({ appId: 'ng-spree' }),
-    BrowserTransferStateModule,
     TransferHttpCacheModule,
     FormsModule,
     LayoutModule,
