@@ -50,7 +50,7 @@
   width: 100vw;
   min-width: 101.7vw;
   left: -76.6vw !important;
-  height: calc(100vh, 9vw);
+  height: calc(100vh - 9vw);
   top: 10vw !important;
   &:before {
     left: 15.3rem;
