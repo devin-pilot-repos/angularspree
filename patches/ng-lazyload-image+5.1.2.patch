@@ -1,0 +1,11 @@
+diff --git a/node_modules/ng-lazyload-image/src/lazyload-image.module.d.ts b/node_modules/ng-lazyload-image/src/lazyload-image.module.d.ts
+index 7e9c9a5..e9c9a5a 100644
+--- a/node_modules/ng-lazyload-image/src/lazyload-image.module.d.ts
++++ b/node_modules/ng-lazyload-image/src/lazyload-image.module.d.ts
+@@ -1,4 +1,4 @@
+ import { ModuleWithProviders } from '@angular/core';
+ import { ModuleOptions } from './types';
+ export declare class LazyLoadImageModule {
+-    static forRoot(options: ModuleOptions): ModuleWithProviders;
++    static forRoot(options: ModuleOptions): ModuleWithProviders<LazyLoadImageModule>;
+ }
