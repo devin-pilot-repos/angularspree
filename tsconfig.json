@@ -19,13 +19,15 @@
       "es2018",
       "dom"
     ],
-    "types": [
-      "jasmine"
-    ]
+    "types": []
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
     "enableIvy": true
-  }
+  },
+  "exclude": [
+    "node_modules/protractor/**/*",
+    "node_modules/@types/node/**/*"
+  ]
 }
