@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { TransferHttpCacheModule } from '@nguniversal/common';
+// import { TransferHttpCacheModule } from '@nguniversal/common';
 
 // Components
 import { AppComponent } from './app.component';
@@ -66,7 +66,7 @@ import { AddressService } from './checkout/address/services/address.service';
 
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({ appId: 'ng-spree' }),
-    TransferHttpCacheModule,
+    // TransferHttpCacheModule removed temporarily for Angular 16 compatibility
     FormsModule,
     LayoutModule,
     Ng2UiAuthModule.forRoot(myAuthConfig),
