@@ -29,6 +29,7 @@
   "exclude": [
     "node_modules/protractor/**/*",
     "node_modules/@types/node/**/*",
-    "node_modules/ngx-toastr/**/*"
+    "node_modules/ngx-toastr/**/*",
+    "node_modules/ngx-toastr"
   ]
 }
