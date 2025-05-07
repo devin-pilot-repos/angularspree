@@ -2063,10 +2063,10 @@
   resolved "https://registry.yarnpkg.com/@types/retry/-/retry-0.12.0.tgz#2b35eccfcee7d38cd72ad99232fbd58bffb3c84d"
   integrity sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==
 
-"@types/scriptjs@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@types/scriptjs/-/scriptjs-0.0.2.tgz#09a2287221a7a341fc6b95b005e4bfb2a5403538"
-  integrity sha1-CaIociGno0H8a5WwBeS/sqVANTg=
+"@types/scriptjs@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@types/scriptjs/-/scriptjs-0.0.5.tgz#a8d10c384e2d040c32acc49ff19f2189f9c39096"
+  integrity sha512-VBvMGKC/m4dBW/9TiC6yRJJrbwrW4vrzjAKjS8wMmUBe1pWTCt+2yXjUMWdsHj9t0P00y6vhp7VsGl0Si1sgrQ==
 
 "@types/send@*":
   version "0.17.4"
@@ -7632,6 +7632,13 @@ ngx-bootstrap@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-6.2.0.tgz#678b274dabfda31411eb1234c981d1967750d890"
   integrity sha512-5WKHo6/ltkenw4UyXZwED8rODCgp2RGbWurzYzZsF/gH1JO5SN7TJ+AL6kXYk6XM42sDA2WhN9Db+ZPNjiyHnA==
+
+ngx-toastr@14:
+  version "14.3.0"
+  resolved "https://registry.yarnpkg.com/ngx-toastr/-/ngx-toastr-14.3.0.tgz#3c366fc5ef8aa1ca8f97ae46c468cfcdf44e620d"
+  integrity sha512-d8j/sOr60w5U7rGlcKQ0Ff4u+m2NzhqU5ZdJXn7QW3aR3Zf/rY7/Fd14BmUindTOWVr2NeTYcQXCjLpir0ldpA==
+  dependencies:
+    tslib "^2.3.0"
 
 nice-napi@^1.0.2:
   version "1.0.2"
