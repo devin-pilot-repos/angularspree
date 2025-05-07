@@ -1,0 +1,11 @@
+diff --git a/node_modules/@ngx-progressbar/core/lib/ng-progress.module.d.ts b/node_modules/@ngx-progressbar/core/lib/ng-progress.module.d.ts
+index 7e9c9a5..e9c9a5a 100644
+--- a/node_modules/@ngx-progressbar/core/lib/ng-progress.module.d.ts
++++ b/node_modules/@ngx-progressbar/core/lib/ng-progress.module.d.ts
+@@ -1,4 +1,4 @@
+ import { ModuleWithProviders } from '@angular/core';
+ import { NgProgressConfig } from './ng-progress.interface';
+ export declare class NgProgressModule {
+-    static forRoot(config?: NgProgressConfig): ModuleWithProviders;
++    static forRoot(config?: NgProgressConfig): ModuleWithProviders<NgProgressModule>;
+ }

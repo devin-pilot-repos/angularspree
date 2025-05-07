@@ -1,0 +1,10 @@
+diff --git a/node_modules/ng2-ui-auth/lib/ng2-ui-auth.module.d.ts b/node_modules/ng2-ui-auth/lib/ng2-ui-auth.module.d.ts
+index 7e9c9a5..e9c9a5a 100644
+--- a/node_modules/ng2-ui-auth/lib/ng2-ui-auth.module.d.ts
++++ b/node_modules/ng2-ui-auth/lib/ng2-ui-auth.module.d.ts
+@@ -1,4 +1,4 @@
+ import { ModuleWithProviders } from '@angular/core';
+ export interface IPartialConfigOptions {
+ }
+-export declare class Ng2UiAuthModule { static forRoot(configOptions?: IPartialConfigOptions, defaultJwtInterceptor?: boolean): ModuleWithProviders; }
++export declare class Ng2UiAuthModule { static forRoot(configOptions?: IPartialConfigOptions, defaultJwtInterceptor?: boolean): ModuleWithProviders<Ng2UiAuthModule>; }

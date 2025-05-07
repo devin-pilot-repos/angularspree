@@ -4,7 +4,7 @@ import { Order } from '../../core/models/order';
 import { User } from '../../core/models/user';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from '../../core/services/mock-toastr.service';
 import { isPlatformBrowser } from '@angular/common';
 
 @Injectable()

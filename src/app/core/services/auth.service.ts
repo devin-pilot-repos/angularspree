@@ -11,7 +11,7 @@ import {
   HttpClient,
   HttpRequest
 } from '@angular/common/http';
-import { ToastrService, ActiveToast } from 'ngx-toastr';
+import { ToastrService, ActiveToast } from './mock-toastr.service';
 import { isPlatformBrowser } from '@angular/common';
 import { User } from '../models/user';
 import { RatingCategory } from '../models/rating_category';

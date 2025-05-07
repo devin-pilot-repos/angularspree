@@ -8,12 +8,12 @@
     "lib": ["es2016", "dom"],
     "outDir": "../out-tsc/app",
     "target": "es5",
-    "module": "es2015",
+    "module": "esnext",
     "baseUrl": "",
     "types": [],
     "paths": {
       "@core": ["./app/core/*"]
     }
   },
-  "exclude": ["test.ts", "**/*.spec.ts"]
+  "exclude": ["test.ts", "**/*.spec.ts", "../node_modules/protractor/**/*"]
 }

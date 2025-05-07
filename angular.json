@@ -9,7 +9,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "prefix": "app",
-          "styleext": "scss"
+          "style": "scss"
         },
         "@schematics/angular:directive": {
           "prefix": "app"
@@ -65,7 +65,9 @@
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.dev-ng-spree.ts"
                 }
-              ]
+              ],
+              "buildOptimizer": false,
+              "aot": false
             },
             "prod-ng-spree": {
               "optimization": true,
@@ -134,7 +136,9 @@
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.dev-ng-spree.ts"
                 }
-              ]
+              ],
+              "buildOptimizer": false,
+              "aot": false
             },
             "prod-ng-spree": {
               "fileReplacements": [
@@ -262,6 +266,7 @@
     }
   },
   "cli": {
-    "defaultCollection": "@ngrx/schematics"
+    "defaultCollection": "@ngrx/schematics",
+    "analytics": false
   }
 }

@@ -1,4 +1,3 @@
-import { element } from 'protractor';
 
 /**
  * Note: This Service has a Lot of

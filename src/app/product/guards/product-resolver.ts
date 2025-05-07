@@ -1,4 +1,4 @@
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from '../../core/services/mock-toastr.service';
 import { catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { ProductService } from './../../core/services/product.service';

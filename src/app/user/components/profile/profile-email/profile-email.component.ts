@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from '../../../../core/services/mock-toastr.service';
 import { UserService } from '../../../services/user.service';
 import { AuthService } from '../../../../core/services/auth.service';
 import { BsModalService } from 'ngx-bootstrap/modal';

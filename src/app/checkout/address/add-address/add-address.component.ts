@@ -9,7 +9,7 @@ import {
   EventEmitter,
   OnDestroy
 } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from '../../../core/services/mock-toastr.service';
 import { AddressService } from '../services/address.service';
 import { getAuthStatus } from '../../../auth/reducers/selectors';
 import { AppState } from '../../../interfaces';

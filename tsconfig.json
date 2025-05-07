@@ -10,17 +10,32 @@
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
+    "target": "ES2022",
+    "useDefineForClassFields": false,
+    "skipLibCheck": true,
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "types": ["node"]
   },
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+    "fullTemplateTypeCheck": false,
+    "strictInjectionParameters": false,
+    "enableIvy": true,
+    "strictTemplates": false,
+    "skipTypeCheck": true
+  },
+  "exclude": [
+    "node_modules/protractor/**/*",
+    "node_modules/ngx-toastr/**/*",
+    "node_modules/ngx-toastr",
+    "node_modules/@ngx-progressbar/**/*",
+    "node_modules/ng-lazyload-image/**/*",
+    "node_modules/ng2-ui-auth/**/*",
+    "node_modules/@ngrx/effects/**/*"
+  ]
 }

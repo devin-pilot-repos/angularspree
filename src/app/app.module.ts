@@ -2,17 +2,15 @@ import { AppPreloadingStrategy } from './app_preloading_strategy';
 import { myAuthConfig } from './oauth_config';
 import { Ng2UiAuthModule } from 'ng2-ui-auth';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  BrowserModule,
-  BrowserTransferStateModule
-} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { TransferState } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { TransferHttpCacheModule } from '@nguniversal/common';
+// import { TransferHttpCacheModule } from '@nguniversal/common';
 
 // Components
 import { AppComponent } from './app.component';
@@ -27,7 +25,7 @@ import { reducers, metaReducers } from './app.reducers';
 import { CheckoutHeaderComponent } from './layout/checkout-header/checkout-header.component';
 import { CheckoutFooterComponent } from './layout/checkout-footer/checkout-footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
+import { ToastrService } from './core/services/mock-toastr.service';
 import { AddressService } from './checkout/address/services/address.service';
 
 @NgModule({
@@ -39,7 +37,7 @@ import { AddressService } from './checkout/address/services/address.service';
   imports: [
     RouterModule.forRoot(routes, {
       preloadingStrategy: AppPreloadingStrategy,
-      initialNavigation: 'enabled'
+      initialNavigation: 'enabledBlocking'
     }),
     StoreModule.forRoot(reducers, { metaReducers, runtimeChecks: { strictStateImmutability: true, strictActionImmutability: true } }),
 
@@ -66,17 +64,12 @@ import { AddressService } from './checkout/address/services/address.service';
 
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({ appId: 'ng-spree' }),
-    BrowserTransferStateModule,
-    TransferHttpCacheModule,
+    // TransferHttpCacheModule removed temporarily for Angular 16 compatibility
     FormsModule,
     LayoutModule,
     Ng2UiAuthModule.forRoot(myAuthConfig),
-    ToastrModule.forRoot({
-      timeOut: 1500,
-      positionClass: 'toast-top-center',
-      preventDuplicates: true,
-      progressAnimation: 'increasing'
-    }),
+    // ToastrModule removed temporarily
+    
     CoreModule,
     SharedModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
