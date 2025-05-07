@@ -1,6 +1,6 @@
 import { JsonApiParserService } from './json-api-parser.service';
 import { CJsonApi } from './../models/jsonapi';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from './mock-toastr.service';
 import { Taxonomy } from './../models/taxonomy';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';

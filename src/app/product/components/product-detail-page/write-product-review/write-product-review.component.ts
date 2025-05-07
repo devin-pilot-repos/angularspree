@@ -1,6 +1,6 @@
 import { Product } from './../../../../core/models/product';
 import { isPlatformBrowser } from '@angular/common';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from '../../../../core/services/mock-toastr.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from './../../../../core/services/product.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';

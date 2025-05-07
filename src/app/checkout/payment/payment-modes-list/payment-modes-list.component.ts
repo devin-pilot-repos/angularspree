@@ -8,7 +8,7 @@ import { environment } from '../../../../environments/environment';
 import { getIsPaymentAdded } from '../../reducers/selectors';
 import { Payment } from '../../../core/models/payment';
 import { Subscription } from 'rxjs';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from '../../../core/services/mock-toastr.service';
 
 @Component({
   selector: 'app-payment-modes-list',

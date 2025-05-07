@@ -16,7 +16,7 @@ import { AppState } from '../../../../../interfaces';
 import { Store } from '@ngrx/store';
 import { getTotalCartItems } from '../../../../../checkout/reducers/selectors';
 import { getAuthStatus } from '../../../../../auth/reducers/selectors';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from '../../../../../core/services/mock-toastr.service';
 
 @Component({
   selector: 'app-product-count',

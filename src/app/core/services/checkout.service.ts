@@ -11,7 +11,7 @@ import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { AppState } from './../../interfaces';
 import { Store } from '@ngrx/store';
 import { Order } from '../models/order';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from './mock-toastr.service';
 import { isPlatformBrowser } from '@angular/common';
 import { User } from '../models/user';
 

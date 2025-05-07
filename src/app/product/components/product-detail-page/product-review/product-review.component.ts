@@ -16,7 +16,7 @@ import {
   getAuthStatus,
   getRatingCategories
 } from '../../../../auth/reducers/selectors';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from '../../../../core/services/mock-toastr.service';
 import { environment } from '../../../../../environments/environment';
 import { RatingOption } from '../../../../core/models/rating_option';
 import { ProductActions } from '../../../actions/product-actions';

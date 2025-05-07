@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { AddressService } from '../../../../checkout/address/services/address.service';
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from '../../../../core/services/mock-toastr.service';
 import { UserService } from '../../../services/user.service';
 import { Address } from '../../../../core/models/address';
 
