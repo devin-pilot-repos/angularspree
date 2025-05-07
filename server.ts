@@ -24,14 +24,10 @@ const {
 
 // Express Engine
 import { ngExpressEngine } from '@nguniversal/express-engine';
-// Import module map for lazy loading
-import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
-
 app.engine(
   'html',
   ngExpressEngine({
-    bootstrap: AppServerModuleNgFactory,
-    providers: [provideModuleMap(LAZY_MODULE_MAP)]
+    bootstrap: AppServerModuleNgFactory
   })
 );
 

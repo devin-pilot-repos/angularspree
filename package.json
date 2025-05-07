@@ -49,7 +49,6 @@
     "@ngu/carousel": "^1.5.4",
     "@nguniversal/common": "^10.1.0",
     "@nguniversal/express-engine": "^10.1.0",
-    "@nguniversal/module-map-ngfactory-loader": "9.0.0-next.9",
     "@ngx-lite/input-star-rating": "^0.2.5",
     "@ngx-lite/json-ld": "^0.5.2",
     "@ngx-progressbar/core": "^5.2.1",
