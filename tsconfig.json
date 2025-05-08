@@ -17,10 +17,16 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "skipLibCheck": true,
+    "strict": false
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+    "strictInjectionParameters": true,
+    "enableIvy": true
+  },
+  "exclude": [
+    "node_modules/protractor/**/*"
+  ]
 }
