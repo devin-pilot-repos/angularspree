@@ -2,17 +2,13 @@ import { AppPreloadingStrategy } from './app_preloading_strategy';
 import { myAuthConfig } from './oauth_config';
 import { Ng2UiAuthModule } from 'ng2-ui-auth';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  BrowserModule,
-  BrowserTransferStateModule
-} from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { TransferHttpCacheModule } from '@nguniversal/common';
 
 // Components
 import { AppComponent } from './app.component';
@@ -36,6 +32,7 @@ import { AddressService } from './checkout/address/services/address.service';
     CheckoutHeaderComponent,
     CheckoutFooterComponent
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     RouterModule.forRoot(routes, {
       preloadingStrategy: AppPreloadingStrategy,
@@ -66,8 +63,6 @@ import { AddressService } from './checkout/address/services/address.service';
 
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({ appId: 'ng-spree' }),
-    BrowserTransferStateModule,
-    TransferHttpCacheModule,
     FormsModule,
     LayoutModule,
     Ng2UiAuthModule.forRoot(myAuthConfig),
