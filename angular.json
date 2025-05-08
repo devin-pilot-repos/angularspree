@@ -153,7 +153,8 @@
             "main": "src/main.server.ts",
             "tsConfig": "src/tsconfig.server.json",
             "sourceMap": true,
-            "optimization": false
+            "optimization": false,
+            "buildOptimizer": false
           },
           "configurations": {
             "mock-ng-spree": {
@@ -163,7 +164,9 @@
                   "with": "src/environments/environment.mock-ng-spree.ts"
                 }
               ]
-            ,              "optimization": true
+            ,
+            "optimization": true,
+            "buildOptimizer": true
 },
             "dev-ng-spree": {
               "fileReplacements": [
@@ -172,7 +175,9 @@
                   "with": "src/environments/environment.dev-ng-spree.ts"
                 }
               ]
-            ,              "optimization": true
+            ,
+            "optimization": true,
+            "buildOptimizer": true
 },
             "prod-ng-spree": {
               "fileReplacements": [
@@ -181,7 +186,9 @@
                   "with": "src/environments/environment.prod-ng-spree.ts"
                 }
               ]
-            ,              "optimization": true
+            ,
+            "optimization": true,
+            "buildOptimizer": true
 },
             "dev-custom": {
               "fileReplacements": [
@@ -190,7 +197,9 @@
                   "with": "src/environments/environment.dev-custom.ts"
                 }
               ]
-            ,              "optimization": true
+            ,
+            "optimization": true,
+            "buildOptimizer": true
 },
             "prod-custom": {
               "fileReplacements": [
@@ -199,7 +208,9 @@
                   "with": "src/environments/environment.prod-custom.ts"
                 }
               ]
-            ,              "optimization": true
+            ,
+            "optimization": true,
+            "buildOptimizer": true
 }
           },
           "defaultConfiguration": ""

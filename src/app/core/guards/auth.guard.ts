@@ -1,11 +1,6 @@
 import { Subscription, Observable } from 'rxjs';
 import { Injectable, OnDestroy } from '@angular/core';
-import {
-  Router,
-  CanActivate,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot
-} from '@angular/router';
+import { Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../interfaces';
 import { getAuthStatus } from '../../auth/reducers/selectors';
@@ -15,7 +10,7 @@ interface CustomActivatedRouteSnapshot extends Omit<ActivatedRouteSnapshot, 'tit
 }
 
 @Injectable()
-export class CanActivateViaAuthGuard implements CanActivate, OnDestroy {
+export class CanActivateViaAuthGuard  implements OnDestroy {
   isAuthenticated: boolean;
   subscription: Subscription;
 

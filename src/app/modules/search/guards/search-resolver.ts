@@ -5,12 +5,7 @@ import { SearchingService } from './../services/searching.service';
 import { map, filter, take } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-  Router
-} from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { AppState } from '../../../interfaces';
 import * as fromSearch from './../store/selectors/search.selector';
 
@@ -19,7 +14,7 @@ interface CustomActivatedRouteSnapshot extends Omit<ActivatedRouteSnapshot, 'tit
 }
 
 @Injectable()
-export class SearchResolver implements Resolve<any> {
+export class SearchResolver  {
   appliedFilters: SearchAppliedParams =
     SearchingService.DEFAULT_APPLIED_FILTERS;
 
