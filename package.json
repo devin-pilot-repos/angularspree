@@ -78,6 +78,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^19.0.1",
     "@angular-devkit/build-angular": "~0.901.15",
     "@angular/cli": "~9.1.15",
     "@angular/compiler-cli": "~9.1.13",
@@ -102,6 +103,7 @@
     "karma-jasmine": "~2.0.0",
     "karma-jasmine-html-reporter": "^1.4.0",
     "nswag": "^11.20.1",
+    "null-loader": "^4.0.1",
     "protractor": "~5.4.1",
     "source-map-explorer": "^1.6.0",
     "sw-precache": "^5.2.1",
