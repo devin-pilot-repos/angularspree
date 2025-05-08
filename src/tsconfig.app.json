@@ -5,10 +5,10 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es2016", "dom"],
+    "lib": ["es2020", "dom"],
     "outDir": "../out-tsc/app",
-    "target": "es5",
-    "module": "es2015",
+    "target": "es2020",
+    "module": "es2020",
     "baseUrl": "",
     "types": [],
     "paths": {
