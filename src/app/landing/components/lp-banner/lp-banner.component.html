@@ -1,9 +1,11 @@
-<ngu-carousel
-  #landingBanners
-  [inputs]="carouselTileConfig"
-  [dataSource]="bannerItems"
+<carousel
+  [itemsPerSlide]="itemsPerSlide"
+  [singleSlideOffset]="singleSlideOffset"
+  [noWrap]="noWrap"
+  [interval]="interval"
+  [showIndicators]="showIndicators"
 >
-  <ngu-item *nguCarouselDef="let banner; let i = index" class="bannerStyle">
+  <slide *ngFor="let banner of bannerItems; let i = index" class="bannerStyle">
     <a href="{{ banner.link_url }}">
       <img
         src="{{ banner.image_link }}"
@@ -11,14 +13,5 @@
         style="display: block; width: 100%;"
       />
     </a>
-  </ngu-item>
-  <button NguCarouselPrev class="leftRs d-none d-sm-block"></button>
-  <button NguCarouselNext class="rightRs d-none d-sm-block"></button>
-  <ul class="ngucarouselPoint" NguCarouselPoint>
-    <li
-      *ngFor="let point of landingBanners.pointNumbers; let i = index"
-      [class.active]="i == landingBanners.activePoint"
-      (click)="landingBanners.moveTo(i)"
-    ></li>
-  </ul>
-</ngu-carousel>
+  </slide>
+</carousel>

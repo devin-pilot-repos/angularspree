@@ -1,4 +1,3 @@
-import { NguCarouselConfig } from '@ngu/carousel';
 import {
   Component,
   OnInit,
@@ -14,26 +13,21 @@ import {
 })
 export class ProductSliderComponent implements OnInit {
   @Input() productsList = new Array(10);
-  public carouselTileConfig: NguCarouselConfig = {
-    grid: { xs: 1, sm: 1, md: 2, lg: 5, all: 0 },
-    slide: 2,
-    speed: 400,
-    animation: 'lazy',
-    point: {
-      visible: false
-    },
-    load: 2,
-    touch: true,
-    velocity: 0,
-    easing: 'ease-in',
-    custom: 'banner'
-  };
   @Input() showRating: boolean;
+  
+  itemsPerSlide = 5;
+  singleSlideOffset = true;
+  noWrap = false;
+  slidesOnly = false;
+  
+  breakpoint(width: number): number {
+    if (width <= 576) return 1;      // xs
+    if (width <= 768) return 2;      // sm
+    if (width <= 992) return 3;      // md
+    return 5;                         // lg
+  }
+  
   constructor() {}
 
   ngOnInit() {}
-
-  moveLeft() {}
-
-  moveRight() {}
 }

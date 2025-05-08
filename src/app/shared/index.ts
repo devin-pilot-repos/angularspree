@@ -2,7 +2,7 @@ import { NgxInputStarRatingModule } from '@ngx-lite/input-star-rating';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { NguCarouselModule } from '@ngu/carousel';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
@@ -64,7 +64,7 @@ import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     ProductSliderComponent,
     SavedAddressComponent,
     SearchBarComponent,
-    NguCarouselModule,
+    CarouselModule,
     BreadcrumbsComponent,
     LazyLoadImageModule
   ],
@@ -77,7 +77,7 @@ import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     RatingModule.forRoot(),
     RouterModule,
     NgxInputStarRatingModule,
-    NguCarouselModule,
+    CarouselModule.forRoot(),
     NgxJsonLdModule,
     LazyLoadImageModule
   ]
