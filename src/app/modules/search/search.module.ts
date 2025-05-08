@@ -3,6 +3,7 @@ import { NgxInputStarRatingModule } from '@ngx-lite/input-star-rating';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { RouterModule } from '@angular/router';
 
 import { SearchRoutingModule } from './search-routing.module';
 import { SharedModule } from './../../shared/index';
@@ -18,7 +19,7 @@ import { EffectsModule } from '@ngrx/effects';
     CommonModule,
     SearchRoutingModule,
     NgxInputStarRatingModule,
-
+    RouterModule,
     SharedModule,
 
     NgxSliderModule,

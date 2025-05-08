@@ -3,7 +3,7 @@ import { myAuthConfig } from './oauth_config';
 import { Ng2UiAuthModule } from 'ng2-ui-auth';
 import { EffectsModule } from '@ngrx/effects';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -13,6 +13,7 @@ import { environment } from '../environments/environment';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { NgxJsonLdModule } from '@ngx-lite/json-ld';
+import { BrowserComponentsModule } from './browser-components.module';
 
 // Components
 import { AppComponent } from './app.component';
@@ -33,7 +34,7 @@ import { AddressService } from './checkout/address/services/address.service';
   declarations: [
     AppComponent
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   imports: [
     RouterModule.forRoot(routes, {
       preloadingStrategy: AppPreloadingStrategy,
@@ -71,6 +72,7 @@ import { AddressService } from './checkout/address/services/address.service';
     LoadingBarModule,
     LoadingBarHttpClientModule,
     NgxJsonLdModule,
+    BrowserComponentsModule,
     Ng2UiAuthModule.forRoot(myAuthConfig),
     ToastrModule.forRoot({
       timeOut: 1500,
