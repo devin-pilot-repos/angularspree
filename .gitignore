@@ -43,3 +43,4 @@ testem.log
 Thumbs.db
 /functions/node_modules
 documentation
+package-lock.json
