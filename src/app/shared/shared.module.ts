@@ -56,7 +56,8 @@ import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     CarouselModule,
     BreadcrumbsComponent,
     LazyLoadImageModule,
-    SearchBarModule
+    SearchBarModule,
+    RouterModule
   ],
   imports: [
     FormsModule,
