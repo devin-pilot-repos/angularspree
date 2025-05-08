@@ -1,6 +1,6 @@
 import { AppPreloadingStrategy } from './app_preloading_strategy';
 import { myAuthConfig } from './oauth_config';
-import { Ng2UiAuthModule } from './ng2-ui-auth-patch';
+// import { Ng2UiAuthModule } from './ng2-ui-auth-patch';
 import { EffectsModule } from '@ngrx/effects';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
@@ -75,7 +75,7 @@ import { AddressService } from './checkout/address/services/address.service';
     NgxJsonLdModule,
     BrowserComponentsModule,
     AppRouterModule,
-    Ng2UiAuthModule.forRoot(myAuthConfig),
+    // Ng2UiAuthModule.forRoot(myAuthConfig),
     ToastrModule.forRoot({
       timeOut: 1500,
       positionClass: 'toast-top-center',
