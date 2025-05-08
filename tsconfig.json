@@ -24,6 +24,9 @@
     "strictInjectionParameters": true
   },
   "exclude": [
-    "node_modules/protractor/**/*.d.ts"
+    "node_modules/protractor/**/*",
+    "e2e/**/*",
+    "**/node_modules/protractor",
+    "**/e2e"
   ]
 }
