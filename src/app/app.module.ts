@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { LoadingBarModule } from '@ngx-loading-bar/core';
-import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 import { BrowserComponentsModule } from './browser-components.module';
 import { AppRouterModule } from './shared/router.module';
@@ -39,7 +39,7 @@ import { AddressService } from './checkout/address/services/address.service';
   imports: [
     RouterModule.forRoot(routes, {
       preloadingStrategy: AppPreloadingStrategy,
-      initialNavigation: 'enabledBlocking'
+      initialNavigation: 'enabled'
     }),
     StoreModule.forRoot(reducers, { metaReducers, runtimeChecks: { strictStateImmutability: true, strictActionImmutability: true } }),
 
@@ -70,8 +70,8 @@ import { AddressService } from './checkout/address/services/address.service';
     FormsModule,
     LayoutModule,
     CheckoutLayoutModule,
-    LoadingBarModule,
-    LoadingBarHttpClientModule,
+    NgProgressModule,
+    NgProgressHttpModule,
     NgxJsonLdModule,
     BrowserComponentsModule,
     AppRouterModule,
