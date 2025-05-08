@@ -70,7 +70,7 @@
     "ngx-toastr": "^9.1.1",
     "picturefill": "^3.0.3",
     "reselect": "^4.0.0",
-    "rxjs": "~6.4.0",
+    "rxjs": "6.5.5",
     "rxjs-compat": "^6.5.2",
     "scriptjs": "^2.5.9",
     "ts-loader": "^5.3.0",
