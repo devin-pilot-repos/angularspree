@@ -25,7 +25,7 @@
     ],
     "useDefineForClassFields": false,
     "paths": {
-      "ng2-ui-auth": ["src/app/types/ng2-ui-auth.d.ts"]
+      "ng2-ui-auth": ["node_modules/ng2-ui-auth/patched/ng2-ui-auth.module.d.ts"]
     }
   },
   "angularCompilerOptions": {
