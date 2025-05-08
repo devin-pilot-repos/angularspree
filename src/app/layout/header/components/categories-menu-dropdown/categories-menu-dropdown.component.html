@@ -42,10 +42,10 @@
               [ngClass]="{'active': selectedItem == i}" [routerLink]="['c' ,taxon.name]">
               {{taxon.name}}</li> -->
             <li
-              *ngFor="let taxon of catgeory_taxonomy.root.taxons; let i = index"
-              (click)="showCategoryonclick(i)"
-              (mouseenter)="showCategory(i)"
-              [ngClass]="{ active: selectedItem == i }"
+              *ngFor="let taxon of catgeory_taxonomy.root.taxons; let idx = index"
+              (click)="showCategoryonclick(idx)"
+              (mouseenter)="showCategory(idx)"
+              [ngClass]="{ active: selectedItem == idx }"
             >
               {{ taxon.name }}
             </li>

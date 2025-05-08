@@ -9,8 +9,8 @@
   >
     <ul class="bg-color">
       <li
-        *ngFor="let taxon of catgeory_taxonomy.root.taxons; let i = index"
-        (click)="showCategory(i)"
+        *ngFor="let taxon of catgeory_taxonomy.root.taxons; let idx = index"
+        (click)="showCategory(idx)"
       >
         {{ taxon.name }}
       </li>
@@ -53,8 +53,8 @@
         {{ menuTaxons.name }}
       </div>
       <li
-        *ngFor="let taxon of menuTaxons.taxons; let i = index"
-        (click)="showSubCategory(i)"
+        *ngFor="let taxon of menuTaxons.taxons; let idx = index"
+        (click)="showSubCategory(idx)"
       >
         {{ taxon.name }}
       </li>
@@ -79,7 +79,7 @@
         {{ subChild.name }}
       </div>
       <li
-        *ngFor="let taxon of subChild.taxons; let i = index"
+        *ngFor="let taxon of subChild.taxons; let idx = index"
         [routerLink]="['s']"
         [queryParams]="{ f: 'Category:' + taxon.name }"
         (click)="onCloseMobilemenu(taxon.name)"
