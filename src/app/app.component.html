@@ -1,7 +1,8 @@
-<ngx-json-ld [json]="schema"></ngx-json-ld>
+<!-- Temporarily commented out for testing -->
+<!-- <ngx-json-ld [json]="schema"></ngx-json-ld> -->
 <div class="selected-theme">
   <section>
-    <ngx-loading-bar color="red" [includeSpinner]="false"></ngx-loading-bar>
+    <!-- <ngx-loading-bar color="red" [includeSpinner]="false"></ngx-loading-bar> -->
 
     <app-header
       *ngIf="currentUrl"
@@ -9,7 +10,8 @@
     ></app-header>
 
     <main class="main-body">
-      <router-outlet></router-outlet>
+      <!-- <router-outlet></router-outlet> -->
+      <div>Loading application...</div>
     </main>
     <app-footer *ngIf="currentUrl"></app-footer>
   </section>
