@@ -24,6 +24,6 @@
     "strictInjectionParameters": true
   },
   "exclude": [
-    "node_modules/protractor/built/index.d.ts"
+    "node_modules/protractor/**/*.d.ts"
   ]
 }
