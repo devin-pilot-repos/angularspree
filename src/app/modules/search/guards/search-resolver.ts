@@ -14,6 +14,10 @@ import {
 import { AppState } from '../../../interfaces';
 import * as fromSearch from './../store/selectors/search.selector';
 
+interface CustomActivatedRouteSnapshot extends Omit<ActivatedRouteSnapshot, 'title'> {
+  title?: string | undefined;
+}
+
 @Injectable()
 export class SearchResolver implements Resolve<any> {
   appliedFilters: SearchAppliedParams =
@@ -25,7 +29,7 @@ export class SearchResolver implements Resolve<any> {
   ) {}
 
   resolve(
-    route: ActivatedRouteSnapshot,
+    route: CustomActivatedRouteSnapshot,
     _state: RouterStateSnapshot
   ): Observable<any> {
     const appliedParams = this.searchingService.convertToAppliedParams(

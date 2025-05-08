@@ -11,6 +11,10 @@ import {
 } from '@angular/router';
 import { Product } from '../../core/models/product';
 
+interface CustomActivatedRouteSnapshot extends Omit<ActivatedRouteSnapshot, 'title'> {
+  title?: string | undefined;
+}
+
 @Injectable()
 export class ProductResolver implements Resolve<Product> {
   constructor(
@@ -20,7 +24,7 @@ export class ProductResolver implements Resolve<Product> {
   ) {}
 
   resolve(
-    route: ActivatedRouteSnapshot,
+    route: CustomActivatedRouteSnapshot,
     _state: RouterStateSnapshot
   ): Observable<Product> {
     const productId = route.params['id'];
