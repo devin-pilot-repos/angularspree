@@ -20,7 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductSliderComponent } from './components/product-slider/product-slider.component';
 import { InnerIproductComponent } from './components/product-slider/inner-product/inner-product.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { SearchBarModule } from './components/search-bar/search-bar.module';
 
 // Directives
 import { ZoomableDirective } from './directives/zoomable.directive';
@@ -41,8 +41,7 @@ import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     ProductSliderComponent,
     InnerIproductComponent,
     SavedAddressComponent,
-    BreadcrumbsComponent,
-    SearchBarComponent
+    BreadcrumbsComponent
   ],
   exports: [
     // components
@@ -63,10 +62,10 @@ import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     ZoomableDirective,
     ProductSliderComponent,
     SavedAddressComponent,
-    SearchBarComponent,
     CarouselModule,
     BreadcrumbsComponent,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    SearchBarModule
   ],
   imports: [
     FormsModule,
@@ -79,7 +78,8 @@ import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     NgxInputStarRatingModule,
     CarouselModule.forRoot(),
     NgxJsonLdModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    SearchBarModule
   ]
 })
 export class SharedModule {}
