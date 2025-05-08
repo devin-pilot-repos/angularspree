@@ -9,7 +9,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "prefix": "app",
-          "styleext": "scss"
+          "style": "scss"
         },
         "@schematics/angular:directive": {
           "prefix": "app"
@@ -19,6 +19,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -52,6 +53,12 @@
           },
           "configurations": {
             "mock-ng-spree": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -60,6 +67,12 @@
               ]
             },
             "dev-ng-spree": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -68,6 +81,12 @@
               ]
             },
             "prod-ng-spree": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -85,6 +104,12 @@
               ]
             },
             "dev-custom": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -93,6 +118,12 @@
               ]
             },
             "prod-custom": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -127,7 +158,8 @@
                   "with": "src/environments/environment.mock-ng-spree.ts"
                 }
               ]
-            },
+            ,              "optimization": true
+},
             "dev-ng-spree": {
               "fileReplacements": [
                 {
@@ -135,7 +167,8 @@
                   "with": "src/environments/environment.dev-ng-spree.ts"
                 }
               ]
-            },
+            ,              "optimization": true
+},
             "prod-ng-spree": {
               "fileReplacements": [
                 {
@@ -143,7 +176,8 @@
                   "with": "src/environments/environment.prod-ng-spree.ts"
                 }
               ]
-            },
+            ,              "optimization": true
+},
             "dev-custom": {
               "fileReplacements": [
                 {
@@ -151,7 +185,8 @@
                   "with": "src/environments/environment.dev-custom.ts"
                 }
               ]
-            },
+            ,              "optimization": true
+},
             "prod-custom": {
               "fileReplacements": [
                 {
@@ -159,7 +194,8 @@
                   "with": "src/environments/environment.prod-custom.ts"
                 }
               ]
-            }
+            ,              "optimization": true
+}
           }
         },
         "serve": {

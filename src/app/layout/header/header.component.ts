@@ -37,7 +37,7 @@ import { Brand } from '../../core/models/brand';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild('autoShownModal', {static: false}) autoShownModal: ModalDirective;
+  @ViewChild('autoShownModal') autoShownModal: ModalDirective;
   @Input() layoutState: LayoutState;
   freeShippingAmount = environment.config.freeShippingAmount;
   currency = environment.config.currency_symbol;
