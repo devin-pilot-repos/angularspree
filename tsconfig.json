@@ -7,11 +7,10 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "es2020",
+    "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
-    "skipLibCheck": true,
+    "target": "es2015",
     "typeRoots": [
       "node_modules/@types",
       "src/app/types"
@@ -23,14 +22,14 @@
       "es2018",
       "dom"
     ],
-    "useDefineForClassFields": false,
     "paths": {
       "ng2-ui-auth": ["src/app/types/ng2-ui-auth.d.ts"]
     }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": true,
+    "enableIvy": true
   },
   "exclude": [
     "node_modules/**/*",

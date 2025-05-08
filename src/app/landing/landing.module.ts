@@ -33,7 +33,7 @@ const COMPONENTS = [
   imports: [
     CommonModule,
     LandingRoutingModule,
-    CarouselModule,
+    CarouselModule.forRoot(),
     SharedModule,
     NgxInputStarRatingModule
   ],
