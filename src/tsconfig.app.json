@@ -12,7 +12,7 @@
     "target": "es2015",
     "module": "esnext",
     "baseUrl": "",
-    "types": [],
+    "types": ["node"],
     "paths": {
       "@core": [
         "./app/core/*"
