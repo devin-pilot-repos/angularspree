@@ -19,7 +19,7 @@ import * as fromCheckout from './reducers/checkout.reducer';
     CommonModule,
     RouterModule.forChild(routes),
     StoreModule.forFeature('checkout', fromCheckout.reducer),
-    EffectsModule.forRoot([CheckoutEffects]),
+    EffectsModule.forFeature([CheckoutEffects]),
     CartModule,
     AddressModule,
     PaymentModule,

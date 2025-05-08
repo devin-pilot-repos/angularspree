@@ -1,5 +1,6 @@
 import { ModuleWithProviders, NgModule, Provider } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 export interface IPartialConfigOptions {
   providers?: { [provider: string]: any };
@@ -38,13 +39,50 @@ export class Ng2UiAuthModule {
 }
 
 export class AuthService {
-  constructor(http: HttpClient) {}
-  login(user: any, url?: string): Observable<any> { return null as any; }
-  signup(user: any, url?: string): Observable<any> { return null as any; }
-  logout(url?: string): Observable<any> { return null as any; }
-  authenticate(name: string, userData?: any): Observable<any> { return null as any; }
-  link(name: string, userData?: any): Observable<any> { return null as any; }
-  unlink(provider: string, url?: string): Observable<any> { return null as any; }
+  constructor(private http: HttpClient) {}
+  
+  login(user: any, url?: string): Observable<any> { 
+    return new Observable(observer => {
+      observer.next({});
+      observer.complete();
+    });
+  }
+  
+  signup(user: any, url?: string): Observable<any> { 
+    return new Observable(observer => {
+      observer.next({});
+      observer.complete();
+    });
+  }
+  
+  logout(url?: string): Observable<any> { 
+    return new Observable(observer => {
+      observer.next({});
+      observer.complete();
+    });
+  }
+  
+  authenticate(name: string, userData?: any): Observable<any> { 
+    return new Observable(observer => {
+      observer.next({});
+      observer.complete();
+    });
+  }
+  
+  link(name: string, userData?: any): Observable<any> { 
+    return new Observable(observer => {
+      observer.next({});
+      observer.complete();
+    });
+  }
+  
+  unlink(provider: string, url?: string): Observable<any> { 
+    return new Observable(observer => {
+      observer.next({});
+      observer.complete();
+    });
+  }
+  
   isAuthenticated(): boolean { return false; }
   getToken(): string { return ''; }
   getPayload(): any { return null; }
@@ -52,8 +90,4 @@ export class AuthService {
   removeToken(): void {}
   setStorageType(type: string): void {}
   getExpirationDate(): Date { return new Date(); }
-}
-
-export interface Observable<T> {
-  subscribe(observer: any): any;
 }
