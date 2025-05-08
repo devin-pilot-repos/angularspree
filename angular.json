@@ -17,11 +17,8 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "./src/custom-webpack/custom-webpack.config.js"
-            },
             "aot": true,
             "outputPath": "dist/browser",
             "index": "src/index.html",
