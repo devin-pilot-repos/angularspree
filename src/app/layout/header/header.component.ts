@@ -109,7 +109,7 @@ export class HeaderComponent implements OnInit {
   }
 
   selectTaxon(taxon) {
-    this.router.navigateByUrl('/s', {
+    this.router.navigate(['/s'], {
       queryParams: { f: `Category:${taxon.name}` }
     });
   }
