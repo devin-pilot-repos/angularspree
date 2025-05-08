@@ -5,7 +5,7 @@ import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { AppState } from '../../interfaces';
 import { Store } from '@ngrx/store';
 import { AuthActions } from '../../auth/actions/auth.actions';
-import { AuthService as OauthService } from 'ng2-ui-auth';
+// import { AuthService as OauthService } from 'ng2-ui-auth';
 import {
   HttpHeaders,
   HttpClient,
@@ -30,7 +30,7 @@ export class AuthService {
     private http: HttpClient,
     private actions: AuthActions,
     private store: Store<AppState>,
-    private oAuthService: OauthService,
+    // private oAuthService: OauthService,
     private toastrService: ToastrService,
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: any
@@ -218,16 +218,18 @@ export class AuthService {
    * @memberof AuthService
    */
   socialLogin(provider: string) {
-    return this.oAuthService.authenticate(provider).pipe(
-      map(user => {
-        this.setTokenInLocalStorage(user, 'user');
-        return user as User;
-      }),
-      catchError(_ => {
-        this.toastrService.error('Social login failed', 'ERROR!');
-        return observableOf('Social login failed');
-      })
-    );
+    // return this.oAuthService.authenticate(provider).pipe(
+    //   map(user => {
+    //     this.setTokenInLocalStorage(user, 'user');
+    //     return user as User;
+    //   }),
+    //   catchError(_ => {
+    //     this.toastrService.error('Social login failed', 'ERROR!');
+    //     return observableOf('Social login failed');
+    //   })
+    // );
+    this.toastrService.info('Social login temporarily disabled', 'INFO');
+    return observableOf({} as User);
   }
 
   getUserToken() {
