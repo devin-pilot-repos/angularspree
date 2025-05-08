@@ -14,6 +14,7 @@ import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 import { BrowserComponentsModule } from './browser-components.module';
+import { AppRouterModule } from './shared/router.module';
 
 // Components
 import { AppComponent } from './app.component';
@@ -73,6 +74,7 @@ import { AddressService } from './checkout/address/services/address.service';
     LoadingBarHttpClientModule,
     NgxJsonLdModule,
     BrowserComponentsModule,
+    AppRouterModule,
     Ng2UiAuthModule.forRoot(myAuthConfig),
     ToastrModule.forRoot({
       timeOut: 1500,
