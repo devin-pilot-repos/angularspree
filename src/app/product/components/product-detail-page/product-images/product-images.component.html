@@ -29,12 +29,14 @@
 </div>
 <div *ngIf="isMobile">
   <div *ngIf="images">
-    <ngu-carousel
-      #productSlider
-      [inputs]="carouselTileConfig"
-      [dataSource]="images"
+    <carousel
+      [itemsPerSlide]="itemsPerSlide"
+      [singleSlideOffset]="singleSlideOffset"
+      [noWrap]="noWrap"
+      [interval]="interval"
+      [showIndicators]="showIndicators"
     >
-      <ngu-item *nguCarouselDef="let image; let i = index" class="bannerStyle">
+      <slide *ngFor="let image of images; let i = index" class="bannerStyle">
         <a>
           <img
             [src]="getProductImageUrl(image.thumb)"
@@ -42,16 +44,7 @@
             style="display: block; width: 100%;"
           />
         </a>
-      </ngu-item>
-      <button NguCarouselPrev class="leftRs d-none"></button>
-      <button NguCarouselNext class="rightRs d-none"></button>
-      <ul class="ngucarouselPoint" NguCarouselPoint>
-        <li
-          *ngFor="let point of productSlider.pointNumbers; let i = index"
-          [class.active]="i == productSlider.activePoint"
-          (click)="productSlider.moveTo(i)"
-        ></li>
-      </ul>
-    </ngu-carousel>
+      </slide>
+    </carousel>
   </div>
 </div>

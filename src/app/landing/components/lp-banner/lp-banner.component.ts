@@ -7,7 +7,6 @@ import {
   AfterViewInit,
   ChangeDetectorRef
 } from '@angular/core';
-import { NguCarouselConfig } from '@ngu/carousel';
 
 @Component({
   selector: 'app-lp-banner',
@@ -17,20 +16,12 @@ import { NguCarouselConfig } from '@ngu/carousel';
 })
 export class LpBannerComponent implements OnInit, AfterViewInit {
   public bannerItems = environment.config.landing_page_banner;
-  public carouselTileConfig: NguCarouselConfig = {
-    grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
-    slide: 1,
-    speed: 500,
-    point: {
-      visible: true
-    },
-    touch: true,
-    velocity: 0,
-    loop: true,
-    interval: { timing: 5000 },
-    animation: 'lazy',
-    custom: 'banner'
-  };
+  
+  itemsPerSlide = 1;
+  singleSlideOffset = false;
+  noWrap = false;
+  interval = 5000;
+  showIndicators = true;
 
   constructor() {}
 

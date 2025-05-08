@@ -218,10 +218,10 @@ export class AuthService {
    * @memberof AuthService
    */
   socialLogin(provider: string) {
-    return this.oAuthService.authenticate<User>(provider).pipe(
+    return this.oAuthService.authenticate(provider).pipe(
       map(user => {
         this.setTokenInLocalStorage(user, 'user');
-        return user;
+        return user as User;
       }),
       catchError(_ => {
         this.toastrService.error('Social login failed', 'ERROR!');

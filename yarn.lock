@@ -245,6 +245,15 @@
     ora "5.4.1"
     rxjs "7.8.1"
 
+"@angular-slider/ngx-slider@^19.0.0":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@angular-slider/ngx-slider/-/ngx-slider-19.0.0.tgz#02c278d732bb076ecfc9f700096787b9c24a8469"
+  integrity sha512-VVJ+Fij5SKnbltxh6TdoBAUAKWfCnSLRPZ7e+r2uO88t8qte5/KHqVOdK4DWCjBr3rEr4YrPR4ylqBCuAWPsKQ==
+  dependencies:
+    detect-passive-events "^2.0.3"
+    rxjs "^7.8.1"
+    tslib "^2.3.0"
+
 "@angular/animations@^16.2.12":
   version "16.2.12"
   resolved "https://registry.npmjs.org/@angular/animations/-/animations-16.2.12.tgz"
@@ -311,9 +320,9 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/forms@^16.2.12":
+"@angular/forms@16.2.12":
   version "16.2.12"
-  resolved "https://registry.npmjs.org/@angular/forms/-/forms-16.2.12.tgz"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-16.2.12.tgz#a533ad61a65080281e709ca68840a1da9f189afc"
   integrity sha512-1Eao89hlBgLR3v8tU91vccn21BBKL06WWxl7zLpQmG6Hun+2jrThgOE4Pf3os4fkkbH4Apj0tWL2fNIWe/blbw==
   dependencies:
     tslib "^2.3.0"
@@ -2083,13 +2092,6 @@
   resolved "https://registry.npmjs.org/@ngtools/webpack/-/webpack-16.2.16.tgz"
   integrity sha512-4gm2allK0Pjy/Lxb9IGRnhEZNEOJSOTWwy09VOdHouV2ODRK7Tto2LgteaFJUUSLkuvWRsI7pfuA6yrz8KDfHw==
 
-"@ngu/carousel@^19.0.0":
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/@ngu/carousel/-/carousel-19.0.0.tgz#16424246d58f7cfe0e5c37be740118f700dc1652"
-  integrity sha512-tdHVotCecNd/nP4aygQFCFi1ZhT3URv3wO3qL+LChDGYsAGn/ocLxyOeDTLv8Asp8mg+xQMnnjUzvMmBG/eUhQ==
-  dependencies:
-    tslib "^2.6.0"
-
 "@nguniversal/common@^8.1.1":
   version "8.1.1"
   resolved "https://registry.npmjs.org/@nguniversal/common/-/common-8.1.1.tgz"
@@ -2119,19 +2121,19 @@
   dependencies:
     tslib "^2.0.0"
 
-"@ngx-progressbar/core@^5.2.1":
-  version "5.2.1"
-  resolved "https://registry.npmjs.org/@ngx-progressbar/core/-/core-5.2.1.tgz"
-  integrity sha512-+tRBWOIR8InIW9OFz32rhgowYyb0Gt5e3RFHbYUqXp19czRGYTVnan2HRM+R3Ees9n5tt62RUAciWOGxhmou+g==
+"@ngx-loading-bar/core@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/core/-/core-7.0.0.tgz#8f298fbf4d99f364c07f067f81fda4498a7a813d"
+  integrity sha512-+YXS+oAXcNf4DGCnZbcgn5EkqTl1qceY/zP7GlVVadVVJab73dzVAss0EnKrh0KENX9R3O83CRciOshTYyG6DQ==
   dependencies:
-    tslib "^1.9.0"
+    tslib "^2.0.0"
 
-"@ngx-progressbar/http@^5.2.1":
-  version "5.2.1"
-  resolved "https://registry.npmjs.org/@ngx-progressbar/http/-/http-5.2.1.tgz"
-  integrity sha512-mUWrI88LNuMAzyz9enfdqILwuqdpXFriZ2m8ji582sVjfV0SoMuKviyhk4p4tfKGZvUnzepImBrC+wBNgjJehw==
+"@ngx-loading-bar/http-client@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/http-client/-/http-client-7.0.0.tgz#8a6963f34f25af4feb1ae367d2b432298f9f6cc9"
+  integrity sha512-m1GEHoTlMLOfXpkHYYhEvpsf7JJxatzjHLqIszqeGUCPM8pskmFJNqEKOwzv/21CfbJdEOWstLiN/1Tz9fkvgA==
   dependencies:
-    tslib "^1.9.0"
+    tslib "^2.0.0"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -4772,6 +4774,11 @@ destroy@1.2.0:
   resolved "https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz"
   integrity sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==
 
+detect-it@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/detect-it/-/detect-it-4.0.1.tgz#3f8de6b8330f5086270571251bedf10aec049e18"
+  integrity sha512-dg5YBTJYvogK1+dA2mBUDKzOWfYZtHVba89SyZUhc4+e3i2tzgjANFg5lDRCd3UOtRcw00vUTMK8LELcMdicug==
+
 detect-node@^2.0.4:
   version "2.1.0"
   resolved "https://registry.npmjs.org/detect-node/-/detect-node-2.1.0.tgz"
@@ -4781,6 +4788,13 @@ detect-passive-events@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/detect-passive-events/-/detect-passive-events-1.0.4.tgz"
   integrity sha512-1nkVZPAhe1BC1nuPksjowNyfhLTH0JDFpLMD5+rjo85Xbe3hMpeNuFAnwJJr8ZIMPMvsA8z10gzUXsmX5TmFkQ==
+
+detect-passive-events@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/detect-passive-events/-/detect-passive-events-2.0.3.tgz#1f75ebf80660a66c615d8be23c3241cdda6977e0"
+  integrity sha512-QN/1X65Axis6a9D8qg8Py9cwY/fkWAmAH/edTbmLMcv4m5dboLJ7LcAi8CfaCON2tjk904KwKX/HTdsHC6yeRg==
+  dependencies:
+    detect-it "^4.0.1"
 
 di@^0.0.1:
   version "0.0.1"
@@ -8313,10 +8327,10 @@ ng5-slider@^1.2.6:
     rxjs-compat "^6.5.2"
     tslib "^1.7.1"
 
-ngx-bootstrap@^19.0.2:
-  version "19.0.2"
-  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-19.0.2.tgz#328b278317346a35840108e3b160ade305b3e815"
-  integrity sha512-DR5sA5e9k1bwtVeo8lQW4Yr8IgU7ba2pco5rlznnr7k91BJ3SNgrUSq+BQfigwARHGmgKCcw9lexu8ZWvefEXg==
+ngx-bootstrap@10.3.0:
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-10.3.0.tgz#688e7df7c8b4302ce342a13c4b49c4d67d117311"
+  integrity sha512-Ok9umbq4tqJSXMy/5/+2VZJHcwj7hD3a3x2KkF1A+f0e70BARY8rfr9QKjGgvywWNyZMf0Z5PvE1WEeEiMvCkA==
   dependencies:
     tslib "^2.3.0"
 
@@ -9854,7 +9868,7 @@ rxjs@^5.5.6:
   dependencies:
     symbol-observable "1.0.1"
 
-rxjs@^7.5.5:
+rxjs@^7.5.5, rxjs@^7.8.1:
   version "7.8.2"
   resolved "https://registry.npmjs.org/rxjs/-/rxjs-7.8.2.tgz"
   integrity sha512-dhKf903U/PQZY6boNNtAGdWbG85WAbjT/1xYoZIC7FAY0yWapOBQVsVrDl58W86//e1VpMNBtRV4MaXfdMySFA==
@@ -11057,7 +11071,7 @@ tslib@^1.7.1, tslib@^1.9.0:
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.9.3.tgz"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
 
-tslib@^2.0.0, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.6.0, tslib@^2.8.1:
+tslib@^2.0.0, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.8.1:
   version "2.8.1"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz"
   integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==

@@ -5,9 +5,9 @@ import { CheckoutActions } from './../checkout/actions/checkout.actions';
 import { CheckoutService } from './services/checkout.service';
 import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgProgressModule } from '@ngx-progressbar/core';
 import { HttpClientModule } from '@angular/common/http';
-import { NgProgressHttpModule } from '@ngx-progressbar/http';
+import { LoadingBarModule } from '@ngx-loading-bar/core';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 // Components
 
 // Services
@@ -37,7 +37,7 @@ import { ResponseInterceptor } from './interceptors/reponse.interceptor';
   exports: [
     // components
     // DummyService
-    NgProgressModule
+    LoadingBarModule
   ],
   imports: [
     // Were not working on modules sice update to rc-5
@@ -48,10 +48,8 @@ import { ResponseInterceptor } from './interceptors/reponse.interceptor';
       UserEffects
     ]),
     HttpClientModule,
-    NgProgressModule.forRoot({
-      meteor: false
-    }),
-    NgProgressHttpModule.forRoot()
+    LoadingBarModule,
+    LoadingBarHttpClientModule
   ],
   providers: [
     VariantParserService,
