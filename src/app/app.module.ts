@@ -1,6 +1,6 @@
 import { AppPreloadingStrategy } from './app_preloading_strategy';
 import { myAuthConfig } from './oauth_config';
-import { Ng2UiAuthModule } from 'ng2-ui-auth';
+import { Ng2UiAuthModule } from './ng2-ui-auth-patch';
 import { EffectsModule } from '@ngrx/effects';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
