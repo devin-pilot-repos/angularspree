@@ -1,7 +1,7 @@
 <ngx-json-ld [json]="schema"></ngx-json-ld>
 <div class="selected-theme">
   <section>
-    <ng-progress [color]="'red'" [spinner]="false"></ng-progress>
+    <ngx-loading-bar color="red" [includeSpinner]="false"></ngx-loading-bar>
 
     <app-header
       *ngIf="currentUrl"

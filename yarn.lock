@@ -245,6 +245,15 @@
     ora "5.4.1"
     rxjs "7.8.1"
 
+"@angular-slider/ngx-slider@^19.0.0":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@angular-slider/ngx-slider/-/ngx-slider-19.0.0.tgz#02c278d732bb076ecfc9f700096787b9c24a8469"
+  integrity sha512-VVJ+Fij5SKnbltxh6TdoBAUAKWfCnSLRPZ7e+r2uO88t8qte5/KHqVOdK4DWCjBr3rEr4YrPR4ylqBCuAWPsKQ==
+  dependencies:
+    detect-passive-events "^2.0.3"
+    rxjs "^7.8.1"
+    tslib "^2.3.0"
+
 "@angular/animations@^16.2.12":
   version "16.2.12"
   resolved "https://registry.npmjs.org/@angular/animations/-/animations-16.2.12.tgz"
@@ -4765,6 +4774,11 @@ destroy@1.2.0:
   resolved "https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz"
   integrity sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==
 
+detect-it@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/detect-it/-/detect-it-4.0.1.tgz#3f8de6b8330f5086270571251bedf10aec049e18"
+  integrity sha512-dg5YBTJYvogK1+dA2mBUDKzOWfYZtHVba89SyZUhc4+e3i2tzgjANFg5lDRCd3UOtRcw00vUTMK8LELcMdicug==
+
 detect-node@^2.0.4:
   version "2.1.0"
   resolved "https://registry.npmjs.org/detect-node/-/detect-node-2.1.0.tgz"
@@ -4774,6 +4788,13 @@ detect-passive-events@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/detect-passive-events/-/detect-passive-events-1.0.4.tgz"
   integrity sha512-1nkVZPAhe1BC1nuPksjowNyfhLTH0JDFpLMD5+rjo85Xbe3hMpeNuFAnwJJr8ZIMPMvsA8z10gzUXsmX5TmFkQ==
+
+detect-passive-events@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/detect-passive-events/-/detect-passive-events-2.0.3.tgz#1f75ebf80660a66c615d8be23c3241cdda6977e0"
+  integrity sha512-QN/1X65Axis6a9D8qg8Py9cwY/fkWAmAH/edTbmLMcv4m5dboLJ7LcAi8CfaCON2tjk904KwKX/HTdsHC6yeRg==
+  dependencies:
+    detect-it "^4.0.1"
 
 di@^0.0.1:
   version "0.0.1"
@@ -9847,7 +9868,7 @@ rxjs@^5.5.6:
   dependencies:
     symbol-observable "1.0.1"
 
-rxjs@^7.5.5:
+rxjs@^7.5.5, rxjs@^7.8.1:
   version "7.8.2"
   resolved "https://registry.npmjs.org/rxjs/-/rxjs-7.8.2.tgz"
   integrity sha512-dhKf903U/PQZY6boNNtAGdWbG85WAbjT/1xYoZIC7FAY0yWapOBQVsVrDl58W86//e1VpMNBtRV4MaXfdMySFA==

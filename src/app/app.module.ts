@@ -6,9 +6,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { LoadingBarModule } from '@ngx-loading-bar/core';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 
 // Components
 import { AppComponent } from './app.component';
@@ -20,17 +24,14 @@ import { LayoutModule } from './layout/index';
 import { CoreModule } from './core/index';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './app.reducers';
-import { CheckoutHeaderComponent } from './layout/checkout-header/checkout-header.component';
-import { CheckoutFooterComponent } from './layout/checkout-footer/checkout-footer.component';
+import { CheckoutLayoutModule } from './layout/checkout/checkout.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AddressService } from './checkout/address/services/address.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CheckoutHeaderComponent,
-    CheckoutFooterComponent
+    AppComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -63,8 +64,13 @@ import { AddressService } from './checkout/address/services/address.service';
 
     BrowserAnimationsModule,
     BrowserModule.withServerTransition({ appId: 'ng-spree' }),
+    CommonModule,
     FormsModule,
     LayoutModule,
+    CheckoutLayoutModule,
+    LoadingBarModule,
+    LoadingBarHttpClientModule,
+    NgxJsonLdModule,
     Ng2UiAuthModule.forRoot(myAuthConfig),
     ToastrModule.forRoot({
       timeOut: 1500,
