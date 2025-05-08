@@ -9,16 +9,15 @@
       "dom"
     ],
     "outDir": "../out-tsc/app",
-    "target": "ES2022",
-    "module": "es2020",
+    "target": "es2015",
+    "module": "esnext",
     "baseUrl": "",
     "types": [],
     "paths": {
       "@core": [
         "./app/core/*"
       ]
-    },
-    "useDefineForClassFields": false
+    }
   },
   "files": [
     "main.ts",

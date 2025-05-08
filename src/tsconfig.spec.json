@@ -8,14 +8,13 @@
       "es2016"
     ],
     "outDir": "../out-tsc/spec",
-    "module": "es2020",
-    "target": "ES2022",
+    "module": "esnext",
+    "target": "es2015",
     "baseUrl": "",
     "types": [
       "jasmine",
       "node"
-    ],
-    "useDefineForClassFields": false
+    ]
   },
   "files": ["test.ts", "polyfills.ts"],
   "include": ["**/*.spec.ts"]
