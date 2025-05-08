@@ -9,7 +9,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "prefix": "app",
-          "styleext": "scss"
+          "style": "scss"
         },
         "@schematics/angular:directive": {
           "prefix": "app"
@@ -48,10 +48,22 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "serviceWorker": true
+            "serviceWorker": true,
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "mock-ng-spree": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -60,6 +72,13 @@
               ]
             },
             "dev-ng-spree": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "60kb",
+                  "maximumError": "100kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -68,12 +87,16 @@
               ]
             },
             "prod-ng-spree": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -85,6 +108,12 @@
               ]
             },
             "dev-custom": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -93,12 +122,16 @@
               ]
             },
             "prod-custom": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -110,14 +143,18 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
             "main": "src/main.server.ts",
-            "tsConfig": "src/tsconfig.server.json"
+            "tsConfig": "src/tsconfig.server.json",
+            "sourceMap": true,
+            "optimization": false,
+            "buildOptimizer": false
           },
           "configurations": {
             "mock-ng-spree": {
@@ -127,7 +164,10 @@
                   "with": "src/environments/environment.mock-ng-spree.ts"
                 }
               ]
-            },
+            ,
+            "optimization": true,
+            "buildOptimizer": true
+},
             "dev-ng-spree": {
               "fileReplacements": [
                 {
@@ -135,7 +175,10 @@
                   "with": "src/environments/environment.dev-ng-spree.ts"
                 }
               ]
-            },
+            ,
+            "optimization": true,
+            "buildOptimizer": true
+},
             "prod-ng-spree": {
               "fileReplacements": [
                 {
@@ -143,7 +186,10 @@
                   "with": "src/environments/environment.prod-ng-spree.ts"
                 }
               ]
-            },
+            ,
+            "optimization": true,
+            "buildOptimizer": true
+},
             "dev-custom": {
               "fileReplacements": [
                 {
@@ -151,7 +197,10 @@
                   "with": "src/environments/environment.dev-custom.ts"
                 }
               ]
-            },
+            ,
+            "optimization": true,
+            "buildOptimizer": true
+},
             "prod-custom": {
               "fileReplacements": [
                 {
@@ -159,8 +208,12 @@
                   "with": "src/environments/environment.prod-custom.ts"
                 }
               ]
-            }
-          }
+            ,
+            "optimization": true,
+            "buildOptimizer": true
+}
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -228,13 +281,6 @@
               "src/manifest.json"
             ]
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
-            "exclude": []
-          }
         }
       }
     },
@@ -250,18 +296,13 @@
             "protractorConfig": "./protractor.conf.js",
             "devServerTarget": "angularspree:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["e2e/tsconfig.e2e.json"],
-            "exclude": []
-          }
         }
       }
     }
   },
   "cli": {
-    "defaultCollection": "@ngrx/schematics"
+    "schematicCollections": [
+      "@ngrx/schematics"
+    ]
   }
 }

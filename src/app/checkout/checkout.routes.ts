@@ -5,7 +5,7 @@ import { CartComponent } from './cart/cart.component';
 import { OrderFailedComponent } from './order-failed/order-failed.component';
 
 export const routes = [
-  { path: '', redirectTo: 'cart', pathMatch: 'full' },
+  { path: '', redirectTo: 'cart', pathMatch: 'full' as 'full' },
   { path: 'cart', component: CartComponent },
   { path: 'address', component: AddressComponent },
   { path: 'payment', component: PaymentComponent },

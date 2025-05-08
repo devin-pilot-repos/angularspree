@@ -48,15 +48,16 @@ export class PaymentComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      const scriptjs = require('scriptjs');
-      scriptjs(
-        [
-          'https://checkout.stripe.com/checkout.js',
-          'https://checkout.razorpay.com/v1/checkout.js'
-        ],
-        'payments',
-        () => {}
-      );
+      import('scriptjs').then(scriptjsModule => {
+        scriptjsModule(
+          [
+            'https://checkout.stripe.com/checkout.js',
+            'https://checkout.razorpay.com/v1/checkout.js'
+          ],
+          'payments',
+          () => {}
+        );
+      });
     }
 
     this.totalCartValue$ = this.store.select(getTotalCartValue);

@@ -39,7 +39,7 @@
         >
           <ul>
             <li
-              *ngFor="let taxon of taxons; let i = index"
+              *ngFor="let taxon of taxons; let idx = index"
               (click)="showCategoryonclick(taxon)"
             >
               <a class="sucathead">{{ taxon.name }}</a>

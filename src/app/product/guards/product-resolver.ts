@@ -3,16 +3,15 @@ import { catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { ProductService } from './../../core/services/product.service';
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-  Router
-} from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Product } from '../../core/models/product';
 
+interface CustomActivatedRouteSnapshot extends Omit<ActivatedRouteSnapshot, 'title'> {
+  title?: string | undefined;
+}
+
 @Injectable()
-export class ProductResolver implements Resolve<Product> {
+export class ProductResolver  {
   constructor(
     private productService: ProductService,
     private toastrService: ToastrService,
@@ -20,7 +19,7 @@ export class ProductResolver implements Resolve<Product> {
   ) {}
 
   resolve(
-    route: ActivatedRouteSnapshot,
+    route: CustomActivatedRouteSnapshot,
     _state: RouterStateSnapshot
   ): Observable<Product> {
     const productId = route.params['id'];

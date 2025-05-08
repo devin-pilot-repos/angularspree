@@ -3,17 +3,28 @@
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es2016", "dom"],
+    "lib": [
+      "es2016",
+      "dom"
+    ],
     "outDir": "../out-tsc/app",
-    "target": "es5",
-    "module": "es2015",
+    "target": "ES2022",
+    "module": "es2020",
     "baseUrl": "",
     "types": [],
     "paths": {
-      "@core": ["./app/core/*"]
-    }
+      "@core": [
+        "./app/core/*"
+      ]
+    },
+    "useDefineForClassFields": false
   },
-  "exclude": ["test.ts", "**/*.spec.ts"]
+  "files": [
+    "main.ts",
+    "polyfills.ts"
+  ],
+  "include": [
+    "**/*.d.ts"
+  ]
 }

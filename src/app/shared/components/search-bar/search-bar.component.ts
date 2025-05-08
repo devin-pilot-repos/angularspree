@@ -3,7 +3,7 @@ import { environment } from './../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { TypeaheadMatch } from 'ngx-bootstrap';
+import { TypeaheadMatch } from 'ngx-bootstrap/typeahead';
 import { mergeMap, map } from 'rxjs/operators';
 
 @Component({
@@ -20,7 +20,7 @@ export class SearchBarComponent {
   searchPlaceholder = environment.config.header.searchPlaceholder;
 
   constructor(private http: HttpClient, private router: Router) {
-    this.dataSource = Observable.create((observer: any) => {
+    this.dataSource = new Observable((observer: any) => {
       observer.next(this.asyncSelected);
     }).pipe(mergeMap((token: string) => this.getStatesAsObservable(token)));
   }
