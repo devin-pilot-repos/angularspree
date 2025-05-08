@@ -15,5 +15,5 @@
       "@core": ["./app/core/*"]
     }
   },
-  "exclude": ["test.ts", "**/*.spec.ts"]
+  "exclude": ["test.ts", "**/*.spec.ts", "../node_modules/protractor/**/*"]
 }
