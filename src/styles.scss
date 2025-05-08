@@ -94,17 +94,10 @@ body {
   }
 }
 
-$s-min: 20;
-$s-max: 70;
-$l-min: 30;
-$l-max: 90;
+// Simplified color generation for Angular 12 compatibility
 @for $i from 1 through 20 {
-  $rand-color: hsla(
-    random(360),
-    $s-min + random($s-max - $s-min),
-    $l-min + random($l-max - $l-min),
-    0.3
-  );
+  $hue: ($i * 18) % 360; // Distribute hues evenly
+  $rand-color: hsla($hue, 50%, 60%, 0.3);
   .bg-rand-#{$i} {
     background-image: radial-gradient($rand-color, #efefef);
   }
